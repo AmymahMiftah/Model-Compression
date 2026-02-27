@@ -61,6 +61,7 @@ prune + short KD finetune (3 epochs)
 python scripts/prune_student_structured.py \
   --student_ckpt outputs_kd_student/student_best.pt \
   --teacher_ckpt outputs/resnet50_cifar10_best.pt \
+  
   --student resnet18 \
   --img_size 128 \
   --prune_scope layer3_layer4 \
