@@ -1,0 +1,101 @@
+{
+  "student_ckpt": "outputs_kd_student/student_best.pt",
+  "teacher_ckpt": "outputs/resnet50_cifar10_best.pt",
+  "student": "resnet18",
+  "img_size": 128,
+  "batch_size": 64,
+  "kd_temperature": 4.0,
+  "kd_eval_batches": 50,
+  "calib_batches": 200,
+  "candidates": [
+    {
+      "scope": "layer4",
+      "prune_amount": 0.1,
+      "quant": "int8_fx",
+      "kd_loss": 0.8906274366378785,
+      "test_acc": 90.16,
+      "latency_ms_per_image": 10.783079788088799,
+      "state_dict_mb": 10.789506912231445,
+      "effective_sparsity": 0.07472820181508226,
+      "ckpt_path": "outputs_search/cand_layer4_p10_int8_fx.pt"
+    },
+    {
+      "scope": "layer3_layer4",
+      "prune_amount": 0.1,
+      "quant": "int8_fx",
+      "kd_loss": 0.9337904345989227,
+      "test_acc": 85.85,
+      "latency_ms_per_image": 10.26341900229454,
+      "state_dict_mb": 10.790494918823242,
+      "effective_sparsity": 0.09377656698363264,
+      "ckpt_path": "outputs_search/cand_layer3_layer4_p10_int8_fx.pt"
+    },
+    {
+      "scope": "layer4",
+      "prune_amount": 0.2,
+      "quant": "int8_fx",
+      "kd_loss": 1.2589984154701233,
+      "test_acc": 61.94,
+      "latency_ms_per_image": 10.734391808509827,
+      "state_dict_mb": 10.789506912231445,
+      "effective_sparsity": 0.14945640363016452,
+      "ckpt_path": "outputs_search/cand_layer4_p20_int8_fx.pt"
+    },
+    {
+      "scope": "layer3_layer4",
+      "prune_amount": 0.2,
+      "quant": "int8_fx",
+      "kd_loss": 1.406548385620117,
+      "test_acc": 49.05,
+      "latency_ms_per_image": 3.805542513728142,
+      "state_dict_mb": 10.790494918823242,
+      "effective_sparsity": 0.18682050453770566,
+      "ckpt_path": "outputs_search/cand_layer3_layer4_p20_int8_fx.pt"
+    },
+    {
+      "scope": "layer4",
+      "prune_amount": 0.3,
+      "quant": "int8_fx",
+      "kd_loss": 1.4347547745704652,
+      "test_acc": 53.93,
+      "latency_ms_per_image": 10.427958741784096,
+      "state_dict_mb": 10.789506912231445,
+      "effective_sparsity": 0.22564986430436604,
+      "ckpt_path": "outputs_search/cand_layer4_p30_int8_fx.pt"
+    },
+    {
+      "scope": "layer4",
+      "prune_amount": 0.4,
+      "quant": "int8_fx",
+      "kd_loss": 1.732364935874939,
+      "test_acc": 22.55,
+      "latency_ms_per_image": 10.812068730592728,
+      "state_dict_mb": 10.789506912231445,
+      "effective_sparsity": 0.3003780661194483,
+      "ckpt_path": "outputs_search/cand_layer4_p40_int8_fx.pt"
+    },
+    {
+      "scope": "layer3_layer4",
+      "prune_amount": 0.3,
+      "quant": "int8_fx",
+      "kd_loss": 1.9506192326545715,
+      "test_acc": 19.33,
+      "latency_ms_per_image": 3.8568470627069473,
+      "state_dict_mb": 10.790494918823242,
+      "effective_sparsity": 0.2820623303804575,
+      "ckpt_path": "outputs_search/cand_layer3_layer4_p30_int8_fx.pt"
+    },
+    {
+      "scope": "layer3_layer4",
+      "prune_amount": 0.4,
+      "quant": "int8_fx",
+      "kd_loss": 2.1225257444381715,
+      "test_acc": 10.0,
+      "latency_ms_per_image": 3.0219193547964096,
+      "state_dict_mb": 10.790494918823242,
+      "effective_sparsity": 0.37510626793453056,
+      "ckpt_path": "outputs_search/cand_layer3_layer4_p40_int8_fx.pt"
+    }
+  ],
+  "wall_time_sec": 5157.359721183777
+}

@@ -1,0 +1,160 @@
+{
+  "teacher_ckpt": "outputs/resnet50_cifar10_best.pt",
+  "student": "resnet18",
+  "dataset": "CIFAR-10 (resized to 128)",
+  "epochs": 15,
+  "batch_size": 64,
+  "device": "cpu",
+  "alpha": 0.7,
+  "temperature": 4.0,
+  "lr": 0.05,
+  "label_smoothing": 0.1,
+  "params_total": 11181642,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.840288143196106,
+      "train_acc": 84.074,
+      "test_acc": 89.86,
+      "lr": 0.05,
+      "epoch_time_sec": 13551.81555724144
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5075689021682739,
+      "train_acc": 92.486,
+      "test_acc": 91.73,
+      "lr": 0.049453690018345146,
+      "epoch_time_sec": 10352.924152851105
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.44179564405441285,
+      "train_acc": 94.662,
+      "test_acc": 92.5,
+      "lr": 0.04783863644106502,
+      "epoch_time_sec": 4106.535945177078
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.4073164926624298,
+      "train_acc": 95.984,
+      "test_acc": 93.15,
+      "lr": 0.04522542485937369,
+      "epoch_time_sec": 4112.516005039215
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.38221209592819216,
+      "train_acc": 96.996,
+      "test_acc": 93.42,
+      "lr": 0.04172826515897146,
+      "epoch_time_sec": 4116.520812988281
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.36356202285766603,
+      "train_acc": 97.932,
+      "test_acc": 94.73,
+      "lr": 0.037500000000000006,
+      "epoch_time_sec": 4211.277756214142
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.35747277002334593,
+      "train_acc": 98.58,
+      "test_acc": 94.31,
+      "lr": 0.032725424859373686,
+      "epoch_time_sec": 4090.5097036361694
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.3502622400569916,
+      "train_acc": 98.93,
+      "test_acc": 95.04,
+      "lr": 0.02761321158169134,
+      "epoch_time_sec": 4260.156793117523
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.3438942583847046,
+      "train_acc": 99.376,
+      "test_acc": 95.39,
+      "lr": 0.02238678841830867,
+      "epoch_time_sec": 5066.765205144882
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.3385864490699768,
+      "train_acc": 99.708,
+      "test_acc": 95.67,
+      "lr": 0.017274575140626316,
+      "epoch_time_sec": 4493.031183958054
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.33707678009033204,
+      "train_acc": 99.788,
+      "test_acc": 96.01,
+      "lr": 0.012500000000000006,
+      "epoch_time_sec": 4072.822958946228
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.33583901987075804,
+      "train_acc": 99.878,
+      "test_acc": 96.11,
+      "lr": 0.008271734841028553,
+      "epoch_time_sec": 4092.6242265701294
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.3365200794792175,
+      "train_acc": 99.908,
+      "test_acc": 96.11,
+      "lr": 0.004774575140626317,
+      "epoch_time_sec": 4087.5619616508484
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.3366625325012207,
+      "train_acc": 99.93,
+      "test_acc": 96.13,
+      "lr": 0.0021613635589349755,
+      "epoch_time_sec": 4088.8133137226105
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.33700535758972167,
+      "train_acc": 99.93,
+      "test_acc": 96.06,
+      "lr": 0.0005463099816548578,
+      "epoch_time_sec": 4087.763003349304
+    }
+  ],
+  "best_test_acc_so_far": 96.13,
+  "epoch_times_sec": [
+    13551.81555724144,
+    10352.924152851105,
+    4106.535945177078,
+    4112.516005039215,
+    4116.520812988281,
+    4211.277756214142,
+    4090.5097036361694,
+    4260.156793117523,
+    5066.765205144882,
+    4493.031183958054,
+    4072.822958946228,
+    4092.6242265701294,
+    4087.5619616508484,
+    4088.8133137226105,
+    4087.763003349304
+  ],
+  "training_wall_time_sec_so_far": 78793.15799283981,
+  "test_top1_acc_final": 96.06,
+  "test_top1_acc_best": 96.13,
+  "latency_ms_per_image": 14.078096821904182,
+  "model_state_dict_mb_final": 42.729408264160156,
+  "training_wall_time_sec": 78988.84887933731,
+  "codecarbon_training_emissions_kgco2": 0.21674423460229192
+}

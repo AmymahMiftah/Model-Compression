@@ -1,0 +1,13 @@
+{
+  "student_ckpt": "outputs_pruned_best/student_pruned_best.pt",
+  "student": "resnet18",
+  "img_size": 128,
+  "quantization": "fx_static_int8_fbgemm",
+  "calib_batches": 200,
+  "fp32_test_acc": 96.09,
+  "fp32_latency_ms_per_image": 11.719523295760155,
+  "int8_test_acc": 96.05,
+  "int8_latency_ms_per_image": 5.159658491611481,
+  "int8_state_dict_mb": 10.78993034362793,
+  "params_total": 11181642
+}

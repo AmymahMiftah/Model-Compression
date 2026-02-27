@@ -1,0 +1,42 @@
+{
+  "student_ckpt": "outputs_kd_student/student_best.pt",
+  "teacher_ckpt": "outputs/resnet50_cifar10_best.pt",
+  "student": "resnet18",
+  "img_size": 128,
+  "prune_scope": "layer4",
+  "prune_amount": 0.1,
+  "pruned_conv_layers": 5,
+  "effective_global_sparsity": 0.07472820181508226,
+  "base_test_acc_before_prune": 96.13,
+  "finetune_epochs": 3,
+  "alpha": 0.7,
+  "temperature": 4.0,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3390135048866272,
+      "train_acc": 99.91,
+      "test_acc": 95.94
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.33760148584365846,
+      "train_acc": 99.978,
+      "test_acc": 96.09
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.33806363647460935,
+      "train_acc": 99.994,
+      "test_acc": 95.92
+    }
+  ],
+  "best_test_acc_so_far": 96.09,
+  "wall_time_sec_so_far": 12319.943664550781,
+  "test_top1_acc_final": 95.92,
+  "latency_ms_per_image": 13.5533856600523,
+  "model_state_dict_mb_final": 42.73031044006348,
+  "params_total": 11181642,
+  "prune_wall_time_sec": 12508.603095769882,
+  "codecarbon_prune_finetune_emissions_kgco2": 0.03249801066085357
+}
