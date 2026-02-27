@@ -21,6 +21,8 @@ Baseline
   --randaugment \
   --track_energy \
   --output_dir outputs_run2"
+
+  
 ///////////////////////////////////
 Knowledge Distillation
 ython scripts/train_student_kd_cifar10.py \
@@ -37,6 +39,8 @@ ython scripts/train_student_kd_cifar10.py \
   --train_aug \
   --track_energy \
   --output_dir outputs_kd_student
+
+  
 ////////////////////////////////////
 Searchin for the best prun structure
 python scripts/search_prune_quant_kd.py \
@@ -50,6 +54,8 @@ python scripts/search_prune_quant_kd.py \
   --kd_eval_batches 50 \
   --calib_batches 200 \
   --output_dir outputs_search
+
+  
 ///////////////////////////////////
 prune + short KD finetune (3 epochs)
 python scripts/prune_student_structured.py \
@@ -65,6 +71,8 @@ python scripts/prune_student_structured.py \
   --track_energy \
   --output_dir outputs_pruned
 /////////////////////////////////
+
+
 INT8 Quantization 
 " python scripts/quantize_student_fx_int8.py \  
 --student_ckpt outputs_pruned_best/student_pruned_best.pt \  
