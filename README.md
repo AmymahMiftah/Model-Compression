@@ -1,8 +1,9 @@
 # Model-Compression
 Model compression for green AI 
 
-The configuration
-Baseline
+## The configuration
+
+* Baseline
 "python scripts/train_benchmark_resnet50_cifar10_ACCURATE.py \
   --pretrained --device cpu \
   --img_size 128 \
@@ -23,8 +24,7 @@ Baseline
   --output_dir outputs_run2"
 
   
-///////////////////////////////////
-Knowledge Distillation
+* Knowledge Distillation
 ython scripts/train_student_kd_cifar10.py \
   --teacher_ckpt outputs/resnet50_cifar10_best.pt \
   --student resnet18 \
@@ -40,9 +40,7 @@ ython scripts/train_student_kd_cifar10.py \
   --track_energy \
   --output_dir outputs_kd_student
 
-  
-////////////////////////////////////
-Searchin for the best prun structure
+* Searchin for the best prun structure
 python scripts/search_prune_quant_kd.py \
   --student_ckpt outputs_kd_student/student_best.pt \
   --teacher_ckpt outputs/resnet50_cifar10_best.pt \
@@ -56,8 +54,7 @@ python scripts/search_prune_quant_kd.py \
   --output_dir outputs_search
 
   
-///////////////////////////////////
-prune + short KD finetune (3 epochs)
+* prune + short KD finetune (3 epochs)
 python scripts/prune_student_structured.py \
   --student_ckpt outputs_kd_student/student_best.pt \
   --teacher_ckpt outputs/resnet50_cifar10_best.pt \
@@ -71,10 +68,9 @@ python scripts/prune_student_structured.py \
   --lr 0.01 \
   --track_energy \
   --output_dir outputs_pruned
-/////////////////////////////////
 
 
-INT8 Quantization 
+* INT8 Quantization 
 " python scripts/quantize_student_fx_int8.py \  
 --student_ckpt outputs_pruned_best/student_pruned_best.pt \  
 --student resnet18 \
@@ -83,3 +79,5 @@ INT8 Quantization
 --batch_size 64 \  
 --num_workers 2 \ 
 --output_dir outputs_int8" 
+##
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18810526.svg)](https://doi.org/10.5281/zenodo.18810526)
